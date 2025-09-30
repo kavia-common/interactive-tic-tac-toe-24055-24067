@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendar - Light Mode (Screen 7:1482)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+  <main class="page" aria-label="Calendar page">
+    <!-- Frame: Light Mode container -->
+    <section class="calendar-card" aria-label="Calendar container">
+      <!-- Header with prev/next and Month/Year -->
+      <header class="calendar-header" role="group" aria-label="Month navigation">
+        <button class="nav-btn prev" aria-label="Previous month" title="Previous month"></button>
+        <div class="month-year" aria-label="Month and year">
+          <div class="dropdown month" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Month selector" tabindex="0">
+            <span class="dropdown-label">April</span>
+            <span class="dropdown-caret" aria-hidden="true"></span>
+            <ul class="dropdown-list" role="listbox" aria-label="Select month">
+              <li role="option">January</li>
+              <li role="option">February</li>
+              <li role="option">March</li>
+              <li role="option" aria-selected="true">April</li>
+              <li role="option">May</li>
+              <li role="option">June</li>
+              <li role="option">July</li>
+              <li role="option">August</li>
+              <li role="option">September</li>
+              <li role="option">October</li>
+              <li role="option">November</li>
+              <li role="option">December</li>
+            </ul>
+          </div>
+          <div class="dropdown year" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Year selector" tabindex="0">
+            <span class="dropdown-label">2021</span>
+            <span class="dropdown-caret" aria-hidden="true"></span>
+            <ul class="dropdown-list" role="listbox" aria-label="Select year">
+              <li role="option">2019</li>
+              <li role="option">2020</li>
+              <li role="option" aria-selected="true">2021</li>
+              <li role="option">2022</li>
+              <li role="option">2023</li>
+              <li role="option">2024</li>
+              <li role="option">2025</li>
+            </ul>
+          </div>
+        </div>
+        <button class="nav-btn next" aria-label="Next month" title="Next month"></button>
+      </header>
+
+      <!-- Day of Week -->
+      <div class="dow-row" role="row" aria-label="Days of week">
+        <div class="dow" role="columnheader" aria-label="Monday">Mo</div>
+        <div class="dow" role="columnheader" aria-label="Tuesday">Tu</div>
+        <div class="dow" role="columnheader" aria-label="Wednesday">We</div>
+        <div class="dow" role="columnheader" aria-label="Thursday">Th</div>
+        <div class="dow" role="columnheader" aria-label="Friday">Fr</div>
+        <div class="dow" role="columnheader" aria-label="Saturday">Sa</div>
+        <div class="dow" role="columnheader" aria-label="Sunday">Su</div>
+      </div>
+
+      <!-- Weeks (static sample replicating Figma arrangement) -->
+      <div class="weeks" role="grid" aria-label="Calendar dates">
+        <!-- Week 1 -->
+        <div class="week" role="row">
+          <button class="day disabled" role="gridcell" aria-disabled="true" aria-label="29 of previous month">29</button>
+          <button class="day disabled" role="gridcell" aria-disabled="true" aria-label="30 of previous month">30</button>
+          <button class="day disabled" role="gridcell" aria-disabled="true" aria-label="31 of previous month">31</button>
+          <button class="day" role="gridcell" aria-label="1">1</button>
+          <button class="day" role="gridcell" aria-label="2">2</button>
+          <button class="day" role="gridcell" aria-label="3">3</button>
+          <button class="day" role="gridcell" aria-label="4">4</button>
+        </div>
+        <!-- Week 2 -->
+        <div class="week" role="row">
+          <button class="day" role="gridcell" aria-label="5">5</button>
+          <button class="day" role="gridcell" aria-label="6">6</button>
+          <button class="day today" role="gridcell" aria-current="date" aria-label="7, today">7</button>
+          <button class="day" role="gridcell" aria-label="8">8</button>
+          <button class="day" role="gridcell" aria-label="9">9</button>
+          <button class="day" role="gridcell" aria-label="10">10</button>
+          <button class="day" role="gridcell" aria-label="11">11</button>
+        </div>
+        <!-- Week 3 -->
+        <div class="week" role="row">
+          <button class="day" role="gridcell" aria-label="12">12</button>
+          <button class="day" role="gridcell" aria-label="13">13</button>
+          <button class="day" role="gridcell" aria-label="14">14</button>
+          <button class="day" role="gridcell" aria-label="15">15</button>
+          <button class="day" role="gridcell" aria-label="16">16</button>
+          <button class="day" role="gridcell" aria-label="17">17</button>
+          <button class="day" role="gridcell" aria-label="18">18</button>
+        </div>
+        <!-- Week 4 -->
+        <div class="week" role="row">
+          <button class="day" role="gridcell" aria-label="19">19</button>
+          <button class="day" role="gridcell" aria-label="20">20</button>
+          <button class="day" role="gridcell" aria-label="21">21</button>
+          <button class="day" role="gridcell" aria-label="22">22</button>
+          <button class="day" role="gridcell" aria-label="23">23</button>
+          <button class="day" role="gridcell" aria-label="24">24</button>
+          <button class="day" role="gridcell" aria-label="25">25</button>
+        </div>
+        <!-- Week 5 -->
+        <div class="week" role="row">
+          <button class="day" role="gridcell" aria-label="26">26</button>
+          <button class="day" role="gridcell" aria-label="27">27</button>
+          <button class="day" role="gridcell" aria-label="28">28</button>
+          <button class="day disabled" role="gridcell" aria-disabled="true" aria-label="1 of next month">1</button>
+          <button class="day disabled" role="gridcell" aria-disabled="true" aria-label="2 of next month">2</button>
+          <button class="day disabled" role="gridcell" aria-disabled="true" aria-label="3 of next month">3</button>
+          <button class="day disabled" role="gridcell" aria-disabled="true" aria-label="4 of next month">4</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
